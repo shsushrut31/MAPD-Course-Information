@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Centennial College
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h2>Mobile Applications Development</h2>
+	<h3>Semester 1</h3>
+  <ion-list>
+    <ion-item *ngFor="let course of courses1 | async">
+     <p> <b> Course Name: </b> {{course.name}} </p>
+     <p> <b> Course Code: </b> {{course.code}} </p>
+     <p> <b> Lab hours per week: </b> {{course.lab}} </p>
+     <p> <b> Lecture hours per week: </b> {{course.lecture}} </p>
+     <p> <b> Description: </b> {{course.description}} </p>
+    </ion-item>
+  </ion-list>
+
+  <h3>Semester 2</h3>
+  <ion-list>
+     <ion-item *ngFor="let course of courses2 | async">
+     <p> <b> Course Name: </b> {{course.name}} </p>
+     <p> <b> Course Code: </b> {{course.code}} </p>
+     <p> <b> Lab hours per week: </b> {{course.lab}} </p>
+     <p> <b> Lecture hours per week: </b> {{course.lecture}} </p>
+     <p> <b> Description: </b> {{course.description}} </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

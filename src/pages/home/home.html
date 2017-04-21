@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Centennial College</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Mobile Applications Development</h2>
+  <ion-img item-height="80px" item-width="80px" src="../assets/centennial_college_logo.jpg"></ion-img>
+  <ion-list>
+    <div class = "row">
+        <div class = "col col-50">
+    <ion-item *ngFor="let course of courses | async" class="item-text-wrap">
+     <p> <b> Program Name: </b> {{course.name}} </p>
+     <p> <b> Program Code: </b> {{course.code}} </p>
+     <p> <b> Credential: </b> {{course.credential}} </p>
+     <p> <b> Program length: </b> {{course.length}} </p>
+     <p> <b> Start Date: </b> {{course.date}} </p>
+     <p> <b> Program Location: </b> {{course.location}} </p>
+     <p> <b> Program Overview: </b> {{course.overview}} </p>
+    </ion-item>
+        </div>
+        <div class = "col col-50"></div>
+    </div>
+  </ion-list>
+</ion-content>

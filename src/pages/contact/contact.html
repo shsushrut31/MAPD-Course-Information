@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Centennial College
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h2>Mobile Applications Development</h2>
+  <ion-list>
+    <div class="card">
+    <ion-item *ngFor="let course of courses | async">
+   <center>  <p> <b> Name: </b> {{course.name}} </p> </center>
+   <center>  <p> <b> Course Teaching: </b> {{course.course}} </p> </center>
+    </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
